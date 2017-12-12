@@ -1,5 +1,8 @@
-Plan:  Done infromation collecting and website brainstorming by the 13th, Done  making every page and adding buttons by 15th,
-Done adding colors and text files for 19th.
+Plan:  Done infromation collecting and website brainstorming by the 13th, Check information collected with Mrs.Keras on 14th, Done making
+every page and adding buttons by 15th, Done adding colors and text files for 17th, Done paper map and Checked coding style with Mrs.Keras
+for 18th, hopefully going above and beyond!
+
+CHECK TOUQUE WHEN ADDING INFO
 
 What job I'll be doing (web designers)
 http://noc.esdc.gc.ca/English/noc/ProfileQuickSearch.aspx?val=2&val1=2175&ver=16&val65=web%20design
@@ -13,8 +16,7 @@ Computer Science Bachelor : https://www.bachelorsportal.com/search/#q=ci-56|di-2
 Graphic Arts College Certificate : https://coned.georgebrown.ca/courses-and-certificates/graphic-design-certificate/
 Web Design College Certificate : https://www.ontariocolleges.ca/en/programs/computers-and-telecommunications/web-design-development
 
-Three Examples, Gov sector
-ASK ON THIS how nmanyexamples, 1 public 1 private?
+Two Examples :
 public sector
 https://www.workopolis.com/jobsearch/job/17919976?cid=hrsdc&utm_source=jobbank.gc.ca&utm_medium=esdc
 (web manager for tdsb)
@@ -28,13 +30,19 @@ https://www1.salary.com/Web-Designer-Salary.html
 
 
 How many procedures/variables :
-Main Program Hide/Show 2 procedures
-Bibliography Hide/Show 2 procedure
-
-
-
-
-
+(do all this basic stuff first then add any fancy ideas)
+Remember to use constants.
+import GUI!!!!!
+Main Program, Hide/Show 2 procedures, button everywhere that isn't homescreen
+    For the information be sure to use text files, learn to add images and use set.backround, veiw.set and change the color and fonts of
+    words for presentation marks.        Lesson 43 for File opening, http://compsci.ca/v3/viewtopic.php?t=191 for images.
+Crediting, Hide/Show 2 procedures, button in homescreen
+Education Needed, Hide/Show procedures + next/back or page buttons, button in homescreen
+Average Salary and Work Conditions/Implecations, hide/Show procedures + next/back buttons, button in homescreen
+Examples, Hide/Show 2 procedures, button in main program, add a lot of design
+Brief explanation on Web Design, Hide/Show 2 procedures, button in main program
+Quit, Cls, thanks for using our program procedure, always accesable 
+Loop, GUI.ProcessEvent!!!!!
 
 
 
