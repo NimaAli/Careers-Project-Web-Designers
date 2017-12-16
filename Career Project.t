@@ -1,4 +1,5 @@
 import GUI
+% ADD CLEAR SCREEN GUI REFRESH TO END OF PROCEDURES THAT LEAVE PAGES WITH TEXT, PUT THE TEXT AGAIN WHEN THE PAGE OPENS
 % Program's Widgets
 var home_button, credit_button, education_button, examples_button, overallJob_button, salaryImplecations_button, quit_button : int
 var next_button, back_button : int
