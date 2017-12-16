@@ -1,5 +1,5 @@
 import GUI
-% ADD CLEAR SCREEN GUI REFRESH TO END OF PROCEDURES THAT LEAVE PAGES WITH TEXT, PUT THE TEXT AGAIN WHEN THE PAGE OPENS
+% ADD CLEAR SCREEN GUI REFRESH TO END OF PROCEDURES THAT LEAVE PAGES WITH TEXT, PUT THE TEXT AGAIN WHEN THE PAGE OPENS, and indent.
 % Program's Widgets
 var home_button, credit_button, education_button, examples_button, overallJob_button, salaryImplecations_button, quit_button : int
 var next_button, back_button : int
@@ -9,6 +9,24 @@ var page, whichScreen : int := 1
 setscreen ("graphics: 1000, 1000")
 Window.Set (defWinId, "title:Web Designers - Nima Aliarzadeh")
 colorback (brightgreen)
+
+% add to all!
+proc callFile (fileName : string)
+var fileNumber : int
+var lineNumber := 0
+var line : string
+open : fileNumber, fileName, get
+   if fileNumber > 0 then
+     loop
+          lineNumber += 1
+          exit when eof (fileNumber)
+          get : fileNumber, line : *
+          put lineNumber, “: “, line
+     end loop
+   else
+     put "File not found."
+   end if
+end callFile
 
 % All the hide and show procedures below will be used in the procedures for the buttons so that those procedures are simple.
 % This will be in any button that leaves the home screen.
