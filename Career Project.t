@@ -4,9 +4,11 @@ var home_button, credit_button, education_button, examples_button, overallJob_bu
 var next_button, back_button : int
 % These two variables the use of if will be used to create one next button instead of a multitude.
 var page, whichScreen : int := 1
-% Program title and size.
-setscreen ("graphics: 400, 500")
+
+setscreen ("graphics: 1000, 1000")
 Window.Set (defWinId, "title:Web Designers - Nima Aliarzadeh")
+colorback (brightgreen)
+
 % All the hide and show procedures below will be used in the procedures for the buttons so that those procedures are simple.
 % This will be in any button that leaves the home screen.
 proc hide_home
@@ -18,6 +20,9 @@ proc hide_home
 end hide_home
 % This will be in the home button which returns to the homescreen.
 proc show_home
+    colorback (brightgreen)
+    GUI.Hide (next_button)
+    GUI.Hide (back_button)
     GUI.Show (credit_button)
     GUI.Show (education_button)
     GUI.Show (examples_button)
@@ -29,30 +34,35 @@ proc hide_credit
 end hide_credit
 % This will be in the credit button to show the bibliography screen.
 proc show_credit
+    colorback (blue)
 end show_credit
 % This will be in the home button to hide the educations screen.
 proc hide_education
 end hide_education
 % This will be in the educations button to show the education screen.
 proc show_education
+    colorback (white)
 end show_education
 % The pattern of the hide procedures in the home button and show procedures in the button it's named after continues.
 proc hide_examples
 end hide_examples
 
 proc show_examples
+    colorback (red)
 end show_examples
 
 proc hide_overallJob
 end hide_overallJob
 
 proc show_overallJob
+    colorback (brightblue)
 end show_overallJob
 
 proc hide_salaryImplecation
 end hide_salaryImplecation
 
 proc show_salaryImplecation
+    colorback (brightred)
 end show_salaryImplecation
 
 % All Button Procedures
@@ -97,6 +107,7 @@ proc thanks
     GUI.Quit
 end thanks
 
+% if the page = last one we no next, if its first page no back
 proc next
     page += 1
     % The First ifs will chec which subject it is changed e.x. citations screen, the second if will check which page it is on.  Then it changes the page.
@@ -133,10 +144,9 @@ examples_button := GUI.CreateButton (170, 5, 50, "Examples", examples)
 overallJob_button := GUI.CreateButton (225, 5, 80, "Job Description", overallJob)
 salaryImplecations_button := GUI.CreateButton (310, 5, 50, "Salary", salaryImplecations)
 quit_button := GUI.CreateButton (940, 999-GUI.GetHeight(quit_button), 50, "Quit", thanks)
-next_button :=
-back_button :=
+next_button := GUI.CreateButton (500, 500, 50, "Next", next)
+back_button := GUI.CreateButton (600, 600, 50, "Back", back)
 
 loop
     exit when GUI.ProcessEvent
 end loop
-
