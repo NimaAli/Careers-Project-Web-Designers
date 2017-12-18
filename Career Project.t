@@ -6,7 +6,7 @@ var next_button, back_button : int
 % These two variables the use of if will be used to create one next button instead of a multitude.
 var page, whichScreen : int := 1
 
-setscreen ("graphics: 1000, 1000")
+setscreen ("graphics: 800, 800")
 Window.Set (defWinId, "title:Web Designers - Nima Aliarzadeh")
 colorback (brightgreen)
 
@@ -77,12 +77,12 @@ proc show_overallJob
     colorback (brightblue)
 end show_overallJob
 
-proc hide_salaryImplecation
-end hide_salaryImplecation
+proc hide_salaryImplecations
+end hide_salaryImplecations
 
-proc show_salaryImplecation
+proc show_salaryImplecations
     colorback (brightred)
-end show_salaryImplecation
+end show_salaryImplecations
 
 % All Button Procedures
 proc home
@@ -120,6 +120,12 @@ proc overallJob
     show_overallJob
 end overallJob
 
+proc salaryImplecations
+    whichScreen := 6
+    hide_home
+    show_salaryImplecations
+end salaryImplecations
+
 proc thanks
     cls
     put "Thanks for using this program!"
@@ -138,6 +144,8 @@ proc next
     
     elsif whichScreen = 5 then
     
+    elsif whichScreen = 6 then
+    
     end if
 end next
 
@@ -151,6 +159,8 @@ proc back
     elsif whichScreen = 4 then
     
     elsif whichScreen = 5 then
+    
+    elsif whichScreen = 6 then
     
     end if
 end back
