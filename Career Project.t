@@ -1,16 +1,13 @@
 import GUI
-% ADD CLEAR SCREEN GUI REFRESH TO END OF PROCEDURES THAT LEAVE PAGES WITH TEXT, PUT THE TEXT AGAIN WHEN THE PAGE OPENS, and indent.
 % Program's Widgets
-var home_button, credit_button, education_button, examples_button, overallJob_button, salaryImplecations_button, quit_button : int
+var home_button, credit_button, education_button, examples_button, overallJob_button, salary_button, quit_button : int
 var next_button, back_button : int
 % These two variables the use of if will be used to create one next button instead of a multitude.
 var page, whichScreen : int := 1
 
-setscreen ("graphics: 800, 800")
+setscreen ("graphics: 700, 600;nobuttonbar")
 Window.Set (defWinId, "title:Web Designers - Nima Aliarzadeh")
-colorback (brightgreen)
 
-% add to all!
 proc callFile (fileName : string)
 var fileNumber : int
 var lineNumber := 0
@@ -21,7 +18,7 @@ open : fileNumber, fileName, get
           lineNumber += 1
           exit when eof (fileNumber)
           get : fileNumber, line : *
-          put lineNumber, “: “, line
+          put lineNumber, ": ", line
      end loop
    else
      put "File not found."
@@ -29,60 +26,69 @@ open : fileNumber, fileName, get
 end callFile
 
 % All the hide and show procedures below will be used in the procedures for the buttons so that those procedures are simple.
+
 % This will be in any button that leaves the home screen.
 proc hide_home
     GUI.Hide (credit_button)
     GUI.Hide (education_button)
     GUI.Hide (examples_button)
     GUI.Hide (overallJob_button)
-    GUI.Hide (salaryImplecations_button)
+    GUI.Hide (salary_button)
 end hide_home
 % This will be in the home button which returns to the homescreen.
 proc show_home
-    colorback (brightgreen)
+    Window.Set (defWinId, "title: Home - Web Designers")
     GUI.Hide (next_button)
     GUI.Hide (back_button)
+    GUI.Hide (home_button)
     GUI.Show (credit_button)
     GUI.Show (education_button)
     GUI.Show (examples_button)
     GUI.Show (overallJob_button)
-    GUI.Show (salaryImplecations_button)
+    GUI.Show (salary_button)
 end show_home
 % This will be in the home button for when leaving credit screen.
 proc hide_credit
 end hide_credit
 % This will be in the credit button to show the bibliography screen.
 proc show_credit
-    colorback (blue)
+    Window.Set (defWinId, "title: Citations - Web Designers")
+    GUI.Show (home_button)
 end show_credit
-% This will be in the home button to hide the educations screen.
+% The pattern of the hide procedures in the home button and show procedures in the button it's named after continues.
 proc hide_education
 end hide_education
-% This will be in the educations button to show the education screen.
+
 proc show_education
-    colorback (white)
+    Window.Set (defWinId, "title: Education - Web Designers")
+    GUI.Show (home_button)
+    callFile ("Education.txt")
 end show_education
-% The pattern of the hide procedures in the home button and show procedures in the button it's named after continues.
+
 proc hide_examples
 end hide_examples
 
 proc show_examples
-    colorback (red)
+    Window.Set (defWinId, "title: Job Examples & Market Outlook - Web Designers")
+    GUI.Show (home_button)
 end show_examples
 
 proc hide_overallJob
 end hide_overallJob
 
 proc show_overallJob
-    colorback (brightblue)
+    Window.Set (defWinId, "title: What Does A Web Designer Do? - Web Designers")
+    GUI.Show (home_button)
 end show_overallJob
 
-proc hide_salaryImplecations
-end hide_salaryImplecations
+proc hide_salary
+    
+end hide_salary
 
-proc show_salaryImplecations
-    colorback (brightred)
-end show_salaryImplecations
+proc show_salary
+    Window.Set (defWinId, "title: Salary - Web Designers")
+    GUI.Show (home_button)
+end show_salary
 
 % All Button Procedures
 proc home
@@ -92,7 +98,7 @@ proc home
     hide_education
     hide_examples
     hide_overallJob
-    hide_salaryImplecations
+    hide_salary
     show_home
 end home
 
@@ -120,11 +126,11 @@ proc overallJob
     show_overallJob
 end overallJob
 
-proc salaryImplecations
+proc salary
     whichScreen := 6
     hide_home
-    show_salaryImplecations
-end salaryImplecations
+    show_salary
+end salary
 
 proc thanks
     cls
@@ -165,17 +171,21 @@ proc back
     end if
 end back
 
+% Main Program
+home_button := GUI.CreateButton (1, 1, 50, "Home", home)
+credit_button := GUI.CreateButton (30, 50, 50, "Citations", credit)
+education_button := GUI.CreateButton (110, 20, 50, "Education", education)
+examples_button := GUI.CreateButton (120, 50, 50, "Examples And Market Outlook", examples)
+overallJob_button := GUI.CreateButton (210, 20, 50, "Job Description", overallJob)
+salary_button := GUI.CreateButton (322, 50, 50, "Salary", salary)
+quit_button := GUI.CreateButton ( 371, 1, 50, "Quit", thanks)
+next_button := GUI.CreateButton (371, 469, 50, "Next", next)
+back_button := GUI.CreateButton (1, 469, 50, "Back", back)
 
-home_button := GUI.CreateButton (5, 5, 50, "Home", home)
-credit_button := GUI.CreateButton (60, 5, 50, "Citations", credit)
-education_button := GUI.CreateButton (115, 5, 50, "Education", education)
-examples_button := GUI.CreateButton (170, 5, 50, "Examples", examples)
-overallJob_button := GUI.CreateButton (225, 5, 80, "Job Description", overallJob)
-salaryImplecations_button := GUI.CreateButton (310, 5, 50, "Salary", salaryImplecations)
-quit_button := GUI.CreateButton (940, 999-GUI.GetHeight(quit_button), 50, "Quit", thanks)
-next_button := GUI.CreateButton (500, 500, 50, "Next", next)
-back_button := GUI.CreateButton (600, 600, 50, "Back", back)
-
+% Done so the user doesn't start with these buttons which have no function in the home page.
+GUI.Hide (home_button)
+GUI.Hide (next_button)
+GUI.Hide (back_button)
 loop
     exit when GUI.ProcessEvent
 end loop
