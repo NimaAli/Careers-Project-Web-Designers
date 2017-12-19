@@ -1,20 +1,28 @@
 Citations
 
-I used the Canadian governements website to help choose which job I would be researching.
+
+I found the potential education requirments from :
+http://noc.esdc.gc.ca/English/noc/ProfileQuickSearch.aspx?val=2&val1=2175&ver=16&val65=web%20design
+Using that information I found two college programs (from Centennial College and Algonquin College)
+that can lead to a career in web design :
+http://www.algonquincollege.com/mediaanddesign/program/interactive-media-design/#ourprogram
+http://www.centennialcollege.ca/programs-courses/full-time/graphic-design/
+I also used this programme as my university programme which takes place out of Ontario but instead in Oregon :
+http://osu-campaign.intostudy.com/digital-communication-arts/
+
+These two links are where I got the information for my job examples, the bottom one being for the public sector:
+https://ca.indeed.com/viewjob?cmp=Mercatus-Technologies-Inc.&t=Ui+Ux+Designer&jk=d3e058f08b582768&q=Web+Designer+%2460%2C000
+https://www.workopolis.com/jobsearch/job/17919976?cid=hrsdc&utm_source=jobbank.gc.ca&utm_medium=esdc
+
+I used information from these sites for my information on the market outlook and salaries of a web designer :
+https://www.payscale.com/research/CA/Job=Web_Designer/Salary
+https://www1.salary.com/Web-Designer-Salary.html
+https://www.jobbank.gc.ca/report-eng.do?area=9219&lang=eng&noc=2175&ln=n&s=2
+
+To choose my job and to for basic overall information about web designing I used :
 http://noc.esdc.gc.ca/English/noc/ProfileQuickSearch.aspx?val=2&val1=2175&ver=16&val65=web%20design
 
-Using information from the Canadian governements website, I found three college and university courses that would aid in becoming a web designer.
-Computer Science Bachelor : https://www.bachelorsportal.com/search/#q=ci-56|di-24|lv-bachelor,preparation&start=0&length=10&order=relevance&direction=desc
-Graphic Arts College Certificate : https://coned.georgebrown.ca/courses-and-certificates/graphic-design-certificate/
-Web Design College Certificate : https://www.ontariocolleges.ca/en/programs/computers-and-telecommunications/web-design-development
 
-The job examples I've used are from
-https://www.workopolis.com/jobsearch/job/17919976?cid=hrsdc&utm_source=jobbank.gc.ca&utm_medium=esdc
-for the public sector and
-(web design for tdsb) 
-https://www.jobbank.gc.ca/jobsearch/jobposting/25396886?source=report
-(Prince Wiliam County job)
-for the private sector.
+This turing program was all made by :
+Nima Aliarzadeh
 
-I used information from this amazing website for statistics on a web designers salary
-https://www1.salary.com/Web-Designer-Salary.html
